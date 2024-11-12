@@ -15,24 +15,28 @@ export const CartProvider = ({ children }) => {
   const addToCart = (product) => {
     console.log("Adding to cart:", product);
     setCartItems((prevItems) => {
-      // vi tjekker om produktet allerede findes i cartItems med find
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
-        // hvis produktet allerede findes i kurven, opdater kun quantity
         return prevItems.map((item) => (item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item));
       } else {
-        // hvis produktet ikke er i kurven, tilføj det med quantity 1
         return [...prevItems, { ...product, quantity: 1 }];
       }
     });
   };
 
+  // removeFromCart fjerner produktet fra kurven baseret på id. filtrerer cartItems-arrayet og laver et ny array uden det produkt, der skal fjernes
   const removeFromCart = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
+  const updateQuantity = (id, quantity) => {
+    setCartItems((prevItems) => prevItems.map((item) => (item.id === id ? { ...item, quantity: quantity } : item)));
+  };
+
+  // clearCart fjerner alle produkter fra kurven og cartItems er nu et tomt array
   const clearCart = () => setCartItems([]);
 
+  // udregner kurvens total
   const cartTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -42,6 +46,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         clearCart,
+        updateQuantity,
         cartTotal,
       }}
     >

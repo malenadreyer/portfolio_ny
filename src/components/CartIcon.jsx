@@ -1,4 +1,4 @@
-// src/components/CartIcon.jsx - oppe i headeren
+// src/components/CartIcon.jsx - kurven oppe i headeren
 "use client";
 import React from "react";
 import Link from "next/link";

@@ -1,8 +1,9 @@
-// src/components/ProductCard.js
+// src/components/ProductCard.js - productcard komponent
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Link from "next/link";
 
+// produkt card med lidt info
 const ProductCard = ({ id, name, description, price, image }) => {
   const { addToCart } = useContext(CartContext);
 
@@ -12,7 +13,7 @@ const ProductCard = ({ id, name, description, price, image }) => {
       <h3 className="text-lg font-semibold mb-2">{name}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <p className="text-xl font-bold text-pink-500 mb-4">{price} kr.</p>
-      <button onClick={() => addToCart({ id, name, price })} className="px-6 py-3 text-white bg-gray-900 rounded hover:bg-gray-800 transition">
+      <button onClick={() => addToCart({ id, name, price, thumbnail: image })} className="px-6 py-3 text-white bg-gray-900 rounded hover:bg-gray-800 transition">
         Tilføj til kurv
       </button>
       <Link href={`/products/${id}`} legacyBehavior>
