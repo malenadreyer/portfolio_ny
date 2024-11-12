@@ -7,14 +7,14 @@ const CheckoutPage = () => {
   const { cartItems, removeFromCart, cartTotal } = useContext(CartContext);
 
   if (!cartItems.length) return <div>Din kurv er tom.</div>;
-
+  // src/app/checkout/page.js
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Din Kurv</h1>
       {cartItems.map((product) => (
         <div key={product.id} className="border-b py-4 flex items-center justify-between">
           <span>
-            {product.title} x{product.quantity}
+            {product.title} x{product.quantity} {/* Her vises titlen */}
           </span>
           <div className="flex items-center">
             <span>{product.price * product.quantity} kr.</span>

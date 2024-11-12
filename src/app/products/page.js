@@ -26,14 +26,7 @@ const ProductsPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {/* mapper dataen i products arrayet */}
         {data.products.map((product) => (
-          <ProductCard
-            key={uuidv4()} // Brug en ny unik nøgle til hvert produkt
-            id={product.id}
-            name={product.title}
-            description={product.description}
-            price={product.price}
-            image={product.thumbnail}
-          />
+          <ProductCard key={uuidv4()} id={product.id} name={product.title} description={product.description} price={product.price} image={product.thumbnail} />
         ))}
       </div>
     </div>
