@@ -2,17 +2,19 @@
 
 "use client";
 
-import React from "react";
-// stale-while-revalidate
+
+import React, { useState } from "react";
 import useSWR from "swr";
 import ProductCard from "../../components/ProductCard";
 import { v4 as uuidv4 } from "uuid";
+import PopupNotification from "@/components/PopNoti";
 
 // fetch() sender HTTP-anmodning til URL'en og then((res) => res.json()) konverterer det til json
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const ProductsPage = () => {
   const { data, error } = useSWR("https://dummyjson.com/products", fetcher);
+  const [showPopup, setShowPopup] = useState(false);
   console.log(data);
 
   if (error) return <div>Der opstod en fejl...</div>;
@@ -20,15 +22,29 @@ const ProductsPage = () => {
   // hvis `data` stadig er null betyder det, at dataene endnu ikke er hentet
   // viser indlæser besked indtil de er tilgængelige
 
+  const handleAddToCart = () => {
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000); // Hide after 3 seconds
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-serif font-bold text-center mb-8 text-gray-900">Webshop</h1>
+      {showPopup && (
+        <PopupNotification
+          message="Produkt tilføjet til din kurv!"
+          onClose={() => setShowPopup(false)}
+        />
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {/* mapper dataen i products arrayet */}
         {data.products.map((product) => (
-          <ProductCard key={uuidv4()} id={product.id} name={product.title} description={product.description} price={product.price} image={product.thumbnail} />
+          <ProductCard key={uuidv4()} id={product.id} name={product.title} description={product.description} price={product.price} image={product.thumbnail} onAddToCart={handleAddToCart}/>
         ))}
       </div>
+      
     </div>
   );
 };
