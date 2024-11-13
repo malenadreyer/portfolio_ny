@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Link from "next/link";
 
-// produkt card med lidt info
+// produkt card med props
 const ProductCard = ({ id, name, description, price, image }) => {
+  // bruger useContext-hooken til at få adgang til addToCart-funktionen fra CartContext
   const { addToCart } = useContext(CartContext);
 
   return (

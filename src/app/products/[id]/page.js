@@ -21,8 +21,12 @@ const ProductDetailPage = () => {
   if (error) return <div>Der opstod en fejl...</div>;
   if (!product) return <div>Indlæser...</div>;
 
+  // det er her der skal gøres noget for at få produktet fra singleview hen til kurven når det tilføjes ..
   const handleAddToCart = () => {
-    addToCart(product); // Sender hele produktet til addToCart
+    addToCart(product); // sender hele produktet til addToCart (troede jeg)
+
+    console.log("Adding to cart:", product);
+    //addToCart({ id, name, price, thumbnail: image })} det er de her ting vi skal få sendt med - jeg troede at jeg havde mappet det ind, så man bare kunne skrive product
     alert("Produkt tilføjet til kurv!");
   };
 
