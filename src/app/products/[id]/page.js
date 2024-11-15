@@ -41,19 +41,19 @@ const ProductDetailPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-    <div className="flex flex-col lg:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col lg:flex-row items-center bg-[#FEFEF2] shadow-lg rounded-lg overflow-hidden">
       <img
         src={product.thumbnail}
         alt={product.title}
         className="w-full lg:w-1/2 object-cover h-96 lg:h-full"
       />
       <div className="p-6 lg:w-1/2">
-        <h1 className="text-4xl font-bold mb-4 text-gray-900">{product.title}</h1>
-        <p className="text-lg text-gray-700 mb-6">{product.description}</p>
-        <div className="text-2xl font-bold text-pink-500 mb-6">{product.price} kr.</div>
+        <h1 className="text-4xl font-bold mb-4 text-[#343067]">{product.title}</h1>
+        <p className="text-lg text-[#343067] mb-6">{product.description}</p>
+        <div className="text-2xl font-bold text-[#343067] mb-6">{product.price} kr.</div>
         <button
           onClick={handleAddToCart}
-          className="px-6 py-3 bg-gray-900 text-white rounded hover:bg-gray-800 transition"
+          className="px-6 py-3 bg-[#E8B3A9] text-white rounded hover:bg-[#343067] transition"
         >
           Tilføj til kurv
         </button>
@@ -62,27 +62,27 @@ const ProductDetailPage = () => {
 
     {/* Reviews Section */}
     <div className="mt-8">
-      <h2 className="text-2xl font-bold mb-4 text-gray-900">Anmeldelser</h2>
+      <h2 className="text-2xl font-bold mb-4 text-[#343067]">Anmeldelser</h2>
       {product.reviews && product.reviews.length > 0 ? (
         product.reviews.map((review, index) => (
-          <div key={index} className="mb-6 p-4 bg-gray-100 rounded-lg">
+          <div key={index} className="mb-6 p-4    rounded-lg">
             <div className="flex items-center mb-2">
               {/* Render hearts based on rating */}
               {[...Array(5)].map((_, i) =>
                 i < review.rating ? (
-                  <FaHeart key={i} className="text-pink-500 mr-1" />
+                  <FaHeart key={i} className="text-[#E8B3A9] mr-1" />
                 ) : (
-                  <FaRegHeart key={i} className="text-pink-500 mr-1" />
+                  <FaRegHeart key={i} className="text-[#E8B3A9] mr-1" />
                 )
               )}
             </div>
-            <p className="text-gray-900 font-semibold">{review.reviewerName}</p>
-            <p className="text-gray-700 mb-2">{review.comment}</p>
-            <p className="text-gray-500 text-sm">{new Date(review.date).toLocaleDateString()}</p>
+            <p className="text-[#343067] font-semibold">{review.reviewerName}</p>
+            <p className="text-[#343067] mb-2">{review.comment}</p>
+            <p className="text-[#343067] text-sm">{new Date(review.date).toLocaleDateString()}</p>
           </div>
         ))
       ) : (
-        <p className="text-gray-700">Ingen anmeldelser endnu.</p>
+        <p className="text-[#343067]">Ingen anmeldelser endnu.</p>
       )}
     </div>
 {showPopup &&(

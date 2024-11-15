@@ -45,14 +45,14 @@ const ProductsPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-serif font-bold text-center mb-8 text-gray-900">Webshop</h1>
+      <h1 className="text-3xl font-josefin font-bold text-center mb-8 text-[#343067]">Webshop</h1>
       <div className="mb-6">
         <input
           type="text"
           value={searchQuery}
           onChange={handleSearchChange}
           placeholder="Søg efter produkt, brand eller tag"
-          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+          className="w-full p-3 border  bg-[#FEFEF2] rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8B3A9]"
         />
       </div>
 
@@ -69,7 +69,7 @@ const ProductsPage = () => {
           key={uuidv4()} 
           id={product.id} 
           name={product.title} 
-          description={product.description} 
+          category={product.category} 
           price={product.price} image={product.thumbnail} 
           onAddToCart={handleAddToCart}/>
         ))}
