@@ -1,4 +1,4 @@
-// src/app/products/[id]/page.js
+// src/app/products/[id]/page.js - singleview side
 "use client";
 import React, { useState, useEffect, useContext } from "react";
 import useSWR from "swr";
