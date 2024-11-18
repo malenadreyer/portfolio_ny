@@ -7,7 +7,12 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        josefin: ["'Josefin Sans'", "sans-serif"],
+        orelega: ["'Orelega One'", "cursive"],
+        poppins: ["'Poppins'", "sans-serif"],
+        roboto: ["'Roboto Flex'", "sans-serif"]
     },
   },
   plugins: [],
-};
+}};
