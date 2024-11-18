@@ -12,7 +12,7 @@ const CheckoutPage = () => {
   // if kurven er tom så returneres besked
   if (!cartItems.length) return <div className="text-center py-8 text-gray-700 text-lg">Din kurv er tom.</div>;
 
-  // din kurv ..
+  // kurv ..
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-">Din Kurv</h1>
