@@ -2,7 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: 'Camelia';
+  src: url('/fonts/Camelia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Charlie';
+  src: url('/fonts/CharlieFawnDemoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'The Shyte';
+  src: url('/fonts/the-shyte.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lutoriaserif';
+  src: url('/fonts/lutoriaserifblack-xgv2g.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lutoria';
+  src: url('/fonts/lutoriaserifthin-lvpw3.ttf') format ('truetype');
+font-weight: normal;
+font-style: normal ;
+}
 :root {
   --background: #FEFEF2;
 }
@@ -16,13 +45,14 @@
 body {
 
   background: var(--background);
-  font-family: 'Josefin Sans', sans-serif;
+  
   
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Josefin Sans', sans-serif;
+h1 {
+  font-family: 'The Shyte';
 color:#343067;
+}
+h3  {
+  font-family: 'Camelia';
 }

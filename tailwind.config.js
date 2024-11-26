@@ -11,7 +11,11 @@ module.exports = {
         josefin: ["'Josefin Sans'", "sans-serif"],
         orelega: ["'Orelega One'", "cursive"],
         poppins: ["'Poppins'", "sans-serif"],
-        roboto: ["'Roboto Flex'", "sans-serif"]
+        roboto: ["'Roboto Flex'", "sans-serif"],
+        camelia: ['Camelia', 'sans-serif'],
+        shyte: ['The Shyte', 'sans-serif'],
+        lutoriaserif: ['lutoriaserif', 'sans serif'],
+        lutoria: ['lutoria', 'sans serif']
     },
   },
   plugins: [],
