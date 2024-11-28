@@ -3,11 +3,11 @@
 const Footer = () => {
     return ( 
     <footer className="bg-[#343067] text-[#FEFEF2]">
- <div className="justify-center items-center overflow-hidden pt-36">
+ <div className="font-josefin justify-center items-center overflow-hidden pt-36">
       <div className="text-[#FEFEF2] text-[3rem] sm:text-[4rem] md:text-[5rem] font-bold flex flex-wrap justify-center items-center">
         {/* Tekst i slangeform */}
         <span
-          className="inline-block"
+          className="inline-block "
           style={{ transform: "translateY(-15px) rotate(20deg)" }}
         >
           G
@@ -93,7 +93,7 @@ const Footer = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg hover:underline font-lutoria"
+            className="text-lg hover:underline font-josefin"
           >
             Github
           </a>
@@ -103,7 +103,7 @@ const Footer = () => {
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-lutoria text-lg  hover:underline"
+            className="font-josefin text-lg  hover:underline"
           >
             Linkedin
           </a>
@@ -113,7 +113,7 @@ const Footer = () => {
             href="https://codepen.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-lutoria hover:underline"
+            className="text-lg font-josefin hover:underline"
           >
             CodePen
           </a>
@@ -128,7 +128,7 @@ const Footer = () => {
             href="https://www.tiktok.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-lutoria hover:underline"
+            className="text-lg font-josefin hover:underline"
           >
             TikTok
           </a>
@@ -138,7 +138,7 @@ const Footer = () => {
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-lutoria hover:underline"
+            className="text-lg font-josefin hover:underline"
           >
             Instagram
           </a>
@@ -148,7 +148,7 @@ const Footer = () => {
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg  font-lutoria hover:underline"
+            className="text-lg  font-josefin hover:underline"
           >
             Facebook
           </a>
@@ -161,7 +161,7 @@ const Footer = () => {
         <p>
           <a
             href="mailto:malenadreyer@gmail.com"
-            className="text-lg  font-lutoria hover:underline"
+            className="text-lg font-josefin hover:underline"
           >
             malenadreyer@gmail.com
           </a>

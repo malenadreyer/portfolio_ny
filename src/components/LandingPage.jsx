@@ -82,21 +82,30 @@ function LandingPage() {
           transform: `scale(${scale})`,
         }}
       >
-        <h1
-          className="max-w-[1200px] w-full mx-auto font-shyte"
-          style={{
-            fontSize: "11vw",
-            lineHeight: "1",
-            paddingTop: "50px",
-            textAlign: "center",
-            fontStyle: "italic",
-            whiteSpace: "normal",
-            paddingBottom: "100px",
-          }}
-        >
-          "HI my name is <span className="font-bold">Maria</span> and this is
-          what's in my bag"
-        </h1>
+       <h1
+  className="max-w-[1200px] w-full mx-auto font-shyte"
+  style={{
+    fontSize: "11vw",
+    lineHeight: "1",
+    paddingTop: "50px",
+    textAlign: "center",
+    fontStyle: "italic",
+    whiteSpace: "normal",
+    paddingBottom: "100px",
+  }}
+>
+  "HI my name is{" "}
+  <span
+    style={{
+      fontWeight: "bold",
+      WebkitTextStroke: "4px",
+      WebkitTextFillColor: "[#343067]",
+    }}
+  >
+    Maria
+  </span>{" "}
+  and this is what's in my bag"
+</h1>
       </div>
 
       {/* Dynamisk rendering af aktive komponenter */}
