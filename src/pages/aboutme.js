@@ -2,12 +2,18 @@
 
 "use client";
 import Image from "next/image";
-import PictureOfMe from "../../../public/moi.png";
-import PictureOfMe1 from "../../../public/moi1.png";
+import React from "react";
+import PictureOfMe from "../../public/moi.png"
+import PictureOfMe1 from "../../public/moi1.png";
 import Link from "next/link";
+import MouseFollower from "@/components/Mouse";
+import Header from "@/components/Header";
 
-const AboutMe = () => {
+function AboutMe() {
   return ( 
+    <>
+    <MouseFollower color="#343067" hoverColor="#343067" />
+<Header />
     <div>
       <h1 className="font-bold text-[5rem] text-center py-7">About me</h1>
       
@@ -47,8 +53,9 @@ const AboutMe = () => {
 </div>
       </div>
       </div>
-
+      </>
    );
+
 }
  
 export default AboutMe;

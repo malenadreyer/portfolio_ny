@@ -1,10 +1,12 @@
 
 
 "use client";
-
+import Header from "@/components/Header";
 
 const Resume = () => {
   return ( 
+    <>
+<Header/>
     <div> <h1 className="font-bold text-[5rem] text-center py-7">Resumé</h1>
 <section id="resumé" class="py-10">
   <div class="relative">
@@ -198,7 +200,7 @@ McDonald's - Kastrup Lufthavn | <a href="https://www.mcdonalds.com/dk/da-dk.html
 </section>
 
       </div>
-      
+      </>
    );
 }
  
