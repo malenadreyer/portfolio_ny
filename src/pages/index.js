@@ -37,7 +37,7 @@ export default function Home() {
     <>
     <Head>
         <title>marmic.studios | Creative web solutions</title>
-        <meta name="description" content="marmic.studios" />
+        <meta name="Frontpage" content="marmic.studios" />
       </Head>
       <MouseFollower color="#FEFEF2" hoverColor="#FEFEF2" />
       {showAnimation ? (

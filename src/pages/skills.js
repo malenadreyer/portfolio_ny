@@ -6,6 +6,7 @@ import { FaRegStar } from "react-icons/fa";
 import MouseFollower from "@/components/Mouse";
 import { motion } from "framer-motion"; // Importer motion fra framer-motion
 import Header from "@/components/Header";
+import Head from "next/head";
 
 const skills = [
     "Frontend development",
@@ -37,6 +38,10 @@ const skills = [
 const Skills = () => {
   return ( 
     <>
+     <Head>
+        <title>What are the skills we bring to your project here at marmic.studios</title>
+        <meta name="Skills" content="marmic.studios" />
+      </Head>
     <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
     <Header/>
     <motion.div

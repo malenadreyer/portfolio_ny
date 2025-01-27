@@ -4,11 +4,16 @@
 import Header from "@/components/Header";
 import { motion } from "framer-motion"; // Importer motion fra framer-motion
 import MouseFollower from "@/components/Mouse";
+import Head from "next/head";
 
 
 const Resume = () => {
   return ( 
     <>
+    <Head>
+        <title>Learn about our resume and what our experience is at marmic.studios</title>
+        <meta name="Resume" content="marmic.studios" />
+      </Head>
     <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
     <Header/>
       <motion.div

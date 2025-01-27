@@ -6,11 +6,16 @@ import PictureOfMe1 from "../../public/moi1.png";
 import Link from "next/link";
 import MouseFollower from "@/components/Mouse";
 import Header from "@/components/Header";
+import Head from "next/head";
 import { motion } from "framer-motion"; // Importer motion fra framer-motion
 
 function AboutMe() {
   return ( 
     <>
+    <Head>
+        <title>Who are Marmic.studios</title>
+        <meta name="About" content="marmic.studios" />
+      </Head>
       <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
       
       
