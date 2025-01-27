@@ -5,7 +5,9 @@ import anime from "animejs";
 import Bag from "../../public/chanel.png";
 import Image from "next/image";
 
-export default function IntroAnimation() {
+
+export default function IntroAnimation({onAnimationEnd}) {
+    
     const [fadeIn, setFadeIn] = useState(false); // Styr synligheden af teksten
 
   const router = useRouter();
@@ -33,7 +35,7 @@ export default function IntroAnimation() {
         duration: 2000,
         easing: "easeInOutSine",
         complete: () => {
-          router.push("/aboutme") // Kald onComplete callback efter animation
+            onAnimationEnd(); // Kald onComplete callback efter animation
         },
       });
 
@@ -54,7 +56,7 @@ export default function IntroAnimation() {
       <div className="intro-screen__titel">
       <div
                 onClick={handleAnimation} // Start animation når tasken klikkes
-                className="cursor-pointer"
+                
               >
                 <Image
                   src={Bag}

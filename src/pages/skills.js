@@ -3,6 +3,9 @@
 "use client";
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
+import MouseFollower from "@/components/Mouse";
+import { motion } from "framer-motion"; // Importer motion fra framer-motion
+import Header from "@/components/Header";
 
 const skills = [
     "Frontend development",
@@ -33,6 +36,14 @@ const skills = [
 
 const Skills = () => {
   return ( 
+    <>
+    <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
+    <Header/>
+    <motion.div
+        initial={{ opacity: 0, y: 100 }} // Start med opacity 0 og y-position lidt under
+        animate={{ opacity: 1, y: 0 }} // Fade ind og bevæg sig op til den oprindelige position
+        transition={{ duration: 1, ease: "easeOut" }} // Timing og transition for animationen
+      >
     <div> <h1 className="font-bold text-[5rem] text-center py-7">Skills</h1>
     <section className="py-10 mx-auto w-full max-w-[1200px] px-4">
 
@@ -71,6 +82,8 @@ const Skills = () => {
     </section>
     
       </div>
+      </motion.div>
+      </>
    );
 }
  

@@ -2,11 +2,21 @@
 
 "use client";
 import Header from "@/components/Header";
+import { motion } from "framer-motion"; // Importer motion fra framer-motion
+import MouseFollower from "@/components/Mouse";
+
 
 const Resume = () => {
   return ( 
     <>
-<Header/>
+    <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
+    <Header/>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }} // Start med opacity 0 og y-position lidt under
+        animate={{ opacity: 1, y: 0 }} // Fade ind og bevæg sig op til den oprindelige position
+        transition={{ duration: 1, ease: "easeOut" }} // Timing og transition for animationen
+      >
+
     <div> <h1 className="font-bold text-[5rem] text-center py-7">Resumé</h1>
 <section id="resumé" class="py-10">
   <div class="relative">
@@ -200,6 +210,7 @@ McDonald's - Kastrup Lufthavn | <a href="https://www.mcdonalds.com/dk/da-dk.html
 </section>
 
       </div>
+      </motion.div>
       </>
    );
 }

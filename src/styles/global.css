@@ -41,7 +41,9 @@ font-style: normal ;
     --background: #FEFEF2;
   }
 }
-
+*, button, link {
+  cursor: none; /* Skjul standard markør på hele sitet */
+}
 body {
 
   background: var(--background);

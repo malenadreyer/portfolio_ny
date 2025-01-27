@@ -2,10 +2,16 @@
 import React, { useState, useEffect } from "react";
 import IntroAnimation from "@/components/Animation";
 import MouseFollower from "@/components/Mouse";
+import Head from "next/head";
 
 export default function Home() {
   const [textVisible, setTextVisible] = useState(false); // Styr synligheden af teksten
   const [showAnimation, setShowAnimation] = useState(false); // Styr visningen af animationen
+  const [animationComplete, setAnimationComplete] = useState(false);
+
+  const handleAnimationEnd = () => {
+    setAnimationComplete(true); // Sæt til true, når animationen er færdig
+  };
 
   useEffect(() => {
     // Fade teksten ind efter 500ms
@@ -29,10 +35,14 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+        <title>marmic.studios | Creative web solutions</title>
+        <meta name="description" content="marmic.studios" />
+      </Head>
       <MouseFollower color="#FEFEF2" hoverColor="#FEFEF2" />
       {showAnimation ? (
-        // Vis animationskomponenten, når showAnimation er true
-        <IntroAnimation />
+        // Passer `onAnimationEnd` her også
+        <IntroAnimation onAnimationEnd={handleAnimationEnd} />
       ) : (
         <div id="home-page">
           <div className="flex flex-col items-center justify-center mt-20">
@@ -66,6 +76,19 @@ export default function Home() {
                 and this is what's in my bag"
               </h1>
             </div>
+          </div>
+        </div>
+      )}
+      {animationComplete && (
+        <div>
+          {/* Indholdet, der kun vises efter animationen */}
+          <div className="flex flex-col items-center justify-center ">
+            <h1 className="text-4xl font-bold text-center">
+              Velkommen til min hjemmeside!
+            </h1>
+            <p className="text-lg text-center mt-4">
+              Her finder du alt om mit arbejde og mine interesser.
+            </p>
           </div>
         </div>
       )}

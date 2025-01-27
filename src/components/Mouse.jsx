@@ -2,18 +2,35 @@
 import React, { useState, useEffect } from "react";
 
 function MouseFollower({ color, hoverColor }) {
-  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
+  const [mousePosition, setMousePosition] = useState({  });
   const [isHovering, setIsHovering] = useState(false);
-  const [isClicked, setIsClicked] = useState(false); // Tilstand for klik
+  const [cursorColor, setCursorColor] = useState(color); // Tilstand for markørens farve
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    const handleMouseDown = () => {
+      setCursorColor("#E8B3A9"); // Skift farve til rød ved klik
+    };
+
+    const handleMouseUp = () => {
+      setCursorColor(isHovering ? hoverColor : color); // Skift farve til hoverColor eller original, afhængig af hover-status
+    };
+
+    // Lyt efter musebevægelser og klik på hele dokumentet
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    window.addEventListener("mousedown", handleMouseDown); // Når musen trykkes
+    window.addEventListener("mouseup", handleMouseUp); // Når musen slippes
+
+    // Ryd event listeners ved komponent unmount
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [color, isHovering, hoverColor]);
 
   useEffect(() => {
     const hoverableElements = document.querySelectorAll("a, button, .hover-target");
@@ -34,35 +51,25 @@ function MouseFollower({ color, hoverColor }) {
     };
   }, []);
 
-  const handleMouseDown = () => {
-    setIsClicked(true); // Når der trykkes på musemarkøren
-  };
-
-  const handleMouseUp = () => {
-    setIsClicked(false); // Når musen slippes
-  };
-
   return (
     <div>
       {/* Mouse follower */}
       <div
-        onMouseDown={handleMouseDown} // Når musen trykkes
-        onMouseUp={handleMouseUp} // Når musen slippes
         style={{
           position: "fixed",
           top: mousePosition.y,
           left: mousePosition.x,
           transform: "translate(-50%, -50%)",
-          width: (isHovering || isClicked) ? "35px" : "20px", // Større ved hover eller klik
-          height: (isHovering || isClicked) ? "35px" : "20px", // Større ved hover eller klik
-          backgroundColor: color,
+          width: isHovering ? "35px" : "20px", // Større ved hover
+          height: isHovering ? "35px" : "20px", // Større ved hover
+          backgroundColor: cursorColor, // Brug den opdaterede farve
           borderRadius: "50%",
           pointerEvents: "none", // Undgå klikblokering
           opacity: 0.9, // Gennemsigtighed
-          boxShadow: (isHovering || isClicked)
-            ? `0 0 30px 15px ${hoverColor}`
-            : `0 0 9px 10px ${hoverColor}`, // Større skygge ved hover eller klik
-          transition: "all 0.2s ease", // Glidende overgange
+          boxShadow: isHovering || cursorColor === "#E8B3A9"
+            ? `0 0 30px 15px ${cursorColor}` // Brug cursorColor til boxShadow
+            : `0 0 9px 10px ${hoverColor}`, // Brug hoverColor når ikke klikker
+          transition: "all 0.01s ease", // Glidende overgange
           zIndex: 9999,
         }}
       />
