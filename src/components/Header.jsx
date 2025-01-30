@@ -43,14 +43,8 @@ function Header() {
 
             {/* Dropdown-indhold */}
             {isOpen && (
-              <div className="absolute mt-2 w-48   ring-0 ring-opacity-5 z-50 font-camelia">
+              <div className="absolute mt-2 w-48 z-9999 ring-0 ring-opacity-5 z-50 font-camelia bg-[#FEFEF2]">
                 <div className="py-1">
-                  <Link
-                    href="/skills"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E8B3A9] hover:text-gray-900"
-                  >
-                    Skills
-                  </Link>
                   <Link
                     href="/resume"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E8B3A9] hover:text-gray-900"
@@ -64,10 +58,10 @@ function Header() {
                     About Me
                   </Link>
                   <Link
-                    href="/link"
+                    href="/projects"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E8B3A9] hover:text-gray-900"
                   >
-                    Links
+                    Projects
                   </Link>
                 </div>
               </div>

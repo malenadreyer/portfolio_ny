@@ -5,8 +5,9 @@ import React from "react";
 import { FaRegStar } from "react-icons/fa";
 import MouseFollower from "@/components/Mouse";
 import { motion } from "framer-motion"; // Importer motion fra framer-motion
-import Header from "@/components/Header";
+import Header from "@/components/Header"; 
 import Head from "next/head";
+import HoverInfo from "@/components/HoverBoks";
 
 const skills = [
     "Frontend development",
@@ -41,6 +42,7 @@ const Skills = () => {
      <Head>
         <title>What are the skills we bring to your project here at marmic.studios</title>
         <meta name="Skills" content="marmic.studios" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
     <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
     <Header/>
@@ -73,7 +75,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-
+      <HoverInfo skill="VSCode" text="I've been working with VSCode for 2 years" picture="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"/>
 
       <h3 className="text-2xl font-semibold text-[#343067] mb-4">Tools</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 font-serif">

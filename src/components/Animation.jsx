@@ -71,7 +71,7 @@ export default function IntroAnimation({onAnimationEnd}) {
         <svg
           className="shape"
           width="100%"
-          height="100vh"
+          height="100%"
           preserveAspectRatio="none"
           viewBox="0 0 1440 800"
         >

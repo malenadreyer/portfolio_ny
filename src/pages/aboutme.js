@@ -15,16 +15,17 @@ function AboutMe() {
     <Head>
         <title>Who are Marmic.studios</title>
         <meta name="About" content="marmic.studios" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
       <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
-      
+      <Header />
       
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Start med opacity 0 og y-position lidt under
         animate={{ opacity: 1, y: 0 }} // Fade ind og bevæg sig op til den oprindelige position
         transition={{ duration: 1, ease: "easeOut" }} // Timing og transition for animationen
       >
-        <Header />
+        
         <h1 className="font-bold text-[5rem] text-center py-7">About me</h1>
         <div> 
           <div className="relative grid justify-items-center">
