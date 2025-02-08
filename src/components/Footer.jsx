@@ -82,7 +82,7 @@ const Footer = () => {
     </div>
 
     <div
-      className="grid grid-cols-3 gap-8 max-w-4xl mx-auto text-[#FEFEF2] pt-24 pb-24"
+      className="grid md:grid-cols-3  grid-cols-2 gap-8 max-w-4xl mx-auto text-[#FEFEF2] pt-24 pb-24"
       style={{  display: "grid" }}
     >
       {/* Første kolonne */}

@@ -13,6 +13,7 @@ const Resume = () => {
     <Head>
         <title>Learn about our resume and what our experience is at marmic.studios</title>
         <meta name="Resume" content="marmic.studios" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
     <MouseFollower color="#343067" hoverColor="#343067" clickedColor="#ffff" />
     <Header/>
