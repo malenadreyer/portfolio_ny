@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>marmic.studios | Creative web solutions</title>
+        <title>marmic.studios | Creative web solutions</title><meta name="p:domain_verify" content="04203ce51c4022fecbbea83dd815257f"/>
         <meta name="description" content="Velkommen til marmic.studios – kreative løsninger og inspiration." />
         <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
