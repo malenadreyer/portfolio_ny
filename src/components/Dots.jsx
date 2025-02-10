@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import styles from "../styles/dot.module.css"
+import "../styles/dot.module.css"
 
 const Dot = () => {
  
