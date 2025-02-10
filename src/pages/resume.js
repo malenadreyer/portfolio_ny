@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { motion } from "framer-motion"; // Importer motion fra framer-motion
 import MouseFollower from "@/components/Mouse";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 
 const Resume = () => {
@@ -216,6 +217,7 @@ McDonald's - Kastrup Lufthavn | <a href="https://www.mcdonalds.com/dk/da-dk.html
 </section>
 
       </div>
+      <Footer/>
       </motion.div>
       </>
    );

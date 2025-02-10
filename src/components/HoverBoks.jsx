@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaRegStar } from "react-icons/fa";
+
 
 const HoverInfo = ({ skill, text, picture, disableHover = false }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -22,12 +24,14 @@ const HoverInfo = ({ skill, text, picture, disableHover = false }) => {
       onMouseLeave={() => !disableHover && setIsHovered(false)} // Kun deaktivere hover, hvis disableHover er false
       onMouseMove={handleMouseMove}
     >
-      {/* Hover-tekst */}
+      
+      <div className="flex items-center">{/* Hover-tekst */}
+      <FaRegStar className="text-[#E8B3A9] mr-3" />
+    
       <span className="text-xl transition">
         {skill}
       </span>
-
-      
+      </div>
       <AnimatePresence>
       {!disableHover && isHovered && (
           <motion.div

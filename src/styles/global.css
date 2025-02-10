@@ -51,9 +51,8 @@ body {
 }
  #home-page {
   background-color: #343067 ;
-  min-height: 100vh; /* Sørg for, at det dækker hele højden af siden */
+  height: 100vh; /* Sørg for, at det dækker hele højden af siden */
   display: flex;
-  flex-direction: column;
 }
 #home-page h1 {
   color: #FEFEF2 ;
@@ -70,6 +69,12 @@ p {
   font-family: 'Josefin Sans';
  
 }
+.text-stroke {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #343067;
+}
+
 .intro-screen {
   width: 100%;
   height: 200vh;
@@ -104,5 +109,23 @@ p {
   display: block;
   fill: #343067;
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {transform: translateX(-100%);
+  }
 
+}
+
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+
+}
 

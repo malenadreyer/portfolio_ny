@@ -6,6 +6,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "../components/Footer"
 import Dots from "@/components/Dots";
+import Skills from "@/components/Skills";
 
 
 
@@ -48,7 +49,7 @@ export default function Home() {
 
       {/* Indhold, der skal være bag tasken, indtil animationen er færdig */}
       <div
-        className={`absolute w-full  justify-center transition-opacity duration-1000 ${
+        className={`absolute justify-center transition-opacity duration-1000 ${
           animationComplete ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -82,6 +83,9 @@ I’ve had the pleasure of working with smaller brands, helping them establish a
 Marmic Studios is here to help you create designs and visuals that leave a lasting impression, strengthen your brand, and provide the digital visibility you need.</p>
   </div>
 </div>
+<Skills/>
+
+
 <Footer/>
 </div>
       </div>
@@ -91,7 +95,7 @@ Marmic Studios is here to help you create designs and visuals that leave a lasti
         <IntroAnimation onAnimationEnd={handleAnimationEnd} />
       ) : (
         <div id="home-page">
-          <div className="flex flex-col items-center justify-center mt-20">
+          <div className="flex items-center justify-center mt-20">
             <div
               className={`flex items-center justify-center w-full transition-opacity duration-500 ${
                 textVisible ? "opacity-100" : "opacity-0"

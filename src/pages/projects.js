@@ -2,10 +2,10 @@
 "use client";
 import Head from "next/head";
 import React from "react";
-import { FaRegStar } from "react-icons/fa";
 import HoverInfo from "@/components/HoverBoks";
 import Header from "@/components/Header";
 import MouseFollower from "@/components/Mouse";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Carousel from "@/components/Carousel";
 
@@ -29,18 +29,12 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }} // Fade ind og bevæg sig op til den oprindelige position
         transition={{ duration: 1, ease: "easeOut" }} // Timing og transition for animationen
       >
-        <h1 className="grid text-4xl font-bold justify-center align-center mb-10" >PROJECTS</h1>
-        <Carousel/>
-        <section className="py-10 mx-auto w-full max-w-[1200px] px-4">
-      <h3 className="text-3xl font-bold text-[#343067] mb-6">Technical Skills</h3>
-      <div className="flex items-center text-[#343067] text-lg">
-      <FaRegStar className="text-[#E8B3A9] mr-3" />
-      <HoverInfo className="cursor-none" skill="Frontend Development" disableHover={true}/>
-
-      </div>
-      </section>
+        <h1 className="grid text-4xl font-bold justify-center align-center" >PROJECTS</h1>
+        <Carousel />
+        <Footer/>
       </motion.div>
       </div>
+        
       </>
    );
 }

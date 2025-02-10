@@ -33,7 +33,7 @@ const Carousel = () => {
       </div>
       
       {/* Arrow buttons in bottom */}
-      <div className="absolute bottom-1 flex gap-5">
+      <div className="absolute bottom-1  flex gap-5">
         <button 
           className="px-6 py-3 bg-[#343067] text-white rounded-[10px] hover:bg-[#E8B3A9] transition duration-300" 
           onClick={moveLeft}
@@ -67,7 +67,7 @@ const Item = ({ project, level }) => {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          Se projekt
+          See project
         </a>
       </div>
     );

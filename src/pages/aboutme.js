@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import PictureOfMe from "../../public/moi.png"
+import Footer from "@/components/Footer";
 import PictureOfMe1 from "../../public/moi1.png";
 import Link from "next/link";
 import MouseFollower from "@/components/Mouse";
@@ -55,11 +56,12 @@ function AboutMe() {
               <button 
                 className="bg-[#343067] font-serif text-white font-bold py-2 px-6 rounded-full hover:bg-[#E8B3A9] transition duration-300 cursor-pointer"
               >
-                Read more
+                Read my resumé
               </button>
             </Link>
           </div>
         </div>
+        <Footer/>
       </motion.div>
     </>
   );
