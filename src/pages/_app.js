@@ -1,5 +1,6 @@
 // src/app/layout.jsx
 import "../styles/global.css";
+import "../styles/dot.css"
 
 
 
