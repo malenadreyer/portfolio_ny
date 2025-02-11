@@ -27,10 +27,25 @@ const Resume = () => {
     <div> <h1 className="font-bold text-[5rem] text-center py-7">Resumé</h1>
 <section id="resumé" class="py-10">
   <div class="relative">
+  <div class="grid grid-cols-3 max-w-[1100px] gap-10 mb-8">
+      <div class=" text-right text-lg text-gray-700">
+        <p className="font-josefin">January 2025 - April 2025</p>
+      </div>
+      <div class="relative col-span-2 ">
+        <div class="absolute w-5 h-5 bg-[#E8B3A9] rounded-full -left-7 top-1"></div>
+        <h3 class="text-xl font-bold pb-2">Multimedia Internship</h3>
+        <p class="text-gray-500 font-josefin">
+          Organic Growth <span>| <a href="https://organicgrowth.dk/" class="text-[#E8B3A9] hover:underline">https://organicgrowth.dk/</a></span>
+        </p>
+        <p class="pb-4 font-serif">
+        As an intern, I work with SEO, content creation, and web design. My tasks cover a wide range of digital marketing activities, including optimizing websites for better search engine visibility, creating engaging content, and enhancing user experience through UX design. I work with tools such as Google Analytics, React, and WordPress to analyze performance and implement effective solutions. This internship provides me with valuable experience in SEO strategy, technical optimization, and content marketing while contributing to the company's growth.</p>
+        <div class="absolute w-0.5 bg-[#E8B3A9] h-[130%] top-[10%] left-[-2%]"></div>
+      </div>
+    </div>
 
     <div class="grid grid-cols-3 max-w-[1100px] gap-10 mb-8">
       <div class=" text-right text-lg text-gray-700">
-        <p className="font-josefin">Oktober 2023 - Current</p>
+        <p className="font-josefin">Oktober 2023 - January 2025</p>
       </div>
       <div class="relative col-span-2 ">
         <div class="absolute w-5 h-5 bg-[#E8B3A9] rounded-full -left-7 top-1"></div>

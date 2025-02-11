@@ -31,7 +31,7 @@ export default function IntroAnimation({onAnimationEnd}) {
       // Animation for intro-screen
       anime({
         targets: ".intro-screen",
-        translateY: "-200vh",
+        translateY: "-420vh",
         duration: 2000,
         easing: "easeInOutSine",
         complete: () => {
@@ -52,10 +52,9 @@ export default function IntroAnimation({onAnimationEnd}) {
   };
 
   return (
-    <div className="intro-screen">
-      <div className="intro-screen__titel">
-      <div
-                onClick={handleAnimation} // Start animation når tasken klikkes
+    <div className="intro-screen min-w-[1200px]  ">
+      <div className="intro-screen__titel min-h-[2200px]">
+      <div onClick={handleAnimation} // Start animation når tasken klikkes
                 
               >
                 <Image
@@ -72,7 +71,7 @@ export default function IntroAnimation({onAnimationEnd}) {
           className="shape"
           width="100%"
           height="100%"
-          preserveAspectRatio="none"
+          preserveAspectRatio="xMidYMid slice"
           viewBox="0 0 1440 800"
         >
           <path

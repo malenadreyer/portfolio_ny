@@ -20,7 +20,7 @@ function Header() {
 <Link href="/aboutme" className="hover:text-gray-400 font-camelia">
               About me
               </Link>
-              <Link href="/aboutme" className="hover:text-gray-400 font-camelia">
+              <Link href="https://pin.it/LVtpwNVoR" className="hover:text-gray-400 font-camelia">
               Pinterest
               </Link>
             
