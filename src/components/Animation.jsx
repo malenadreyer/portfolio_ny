@@ -52,8 +52,8 @@ export default function IntroAnimation({onAnimationEnd}) {
   };
 
   return (
-    <div className="intro-screen min-w-[1200px]  ">
-      <div className="intro-screen__titel min-h-[2200px]">
+    <div className="intro-screen min-w-[1200px] md:min-w-full ">
+      <div className="intro-screen__titel min-h-[2200px] md:min-h-full">
       <div onClick={handleAnimation} // Start animation når tasken klikkes
                 
               >

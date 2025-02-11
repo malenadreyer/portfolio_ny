@@ -95,7 +95,7 @@ Marmic Studios is here to help you create designs and visuals that leave a lasti
         <IntroAnimation onAnimationEnd={handleAnimationEnd} />
       ) : (
         <div id="home-page">
-          <div className="flex items-center justify-center mt-20">
+          <div className="flex  min-w-[1200px] md:min-w-full items-center justify-center mt-20">
             <div
               className={`flex items-center justify-center w-full transition-opacity duration-500 ${
                 textVisible ? "opacity-100" : "opacity-0"
@@ -103,9 +103,8 @@ Marmic Studios is here to help you create designs and visuals that leave a lasti
             >
               <h1
                 onClick={handleTextFadeOut}
-                className="max-w-[1200px] w-full mx-auto font-shyte cursor-pointer"
+                className="max-w-[1200px]  w-full mx-auto font-shyte cursor-pointer"
                 style={{
-                  fontSize: "11vw",
                   lineHeight: "1",
                   textAlign: "center",
                   fontStyle: "italic",

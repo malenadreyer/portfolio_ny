@@ -51,12 +51,21 @@ body {
 }
  #home-page {
   background-color: #343067 ;
-  height: 100vh; /* Sørg for, at det dækker hele højden af siden */
+  min-height: 100%;
+  min-width: 100%; /* Sørg for, at det dækker hele højden af siden */
   display: flex;
   position: absolute;
 }
+
+@media (max-width:768px) {
+  #home-page {
+    min-height: 2200px;
+    
+  }
+}
 #home-page h1 {
   color: #FEFEF2 ;
+  font-size: 11vh;
 }
 h1 {
   font-family: 'The Shyte';
