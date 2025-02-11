@@ -90,7 +90,7 @@ const Footer = () => {
         <h3 className="text-2xl font-bold mb-4">Links</h3>
         <p>
           <a
-            href="https://github.com"
+            href="https://github.com/malenadreyer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg hover:underline font-josefin"
@@ -100,7 +100,7 @@ const Footer = () => {
         </p>
         <p>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/maria-elena-toca-dreyer-078813136/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-josefin text-lg  hover:underline"
@@ -110,7 +110,7 @@ const Footer = () => {
         </p>
         <p>
           <a
-            href="https://codepen.io"
+            href="https://codepen.io/malenadreyer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg font-josefin hover:underline"
@@ -125,7 +125,7 @@ const Footer = () => {
         <h3 className="text-2xl font-bold mb-4">Online</h3>
         <p>
           <a
-            href="https://www.tiktok.com"
+            href="https://www.tiktok.com/@malenadreyer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg font-josefin hover:underline"
@@ -135,7 +135,7 @@ const Footer = () => {
         </p>
         <p>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/malenadreyer/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg font-josefin hover:underline"
@@ -145,7 +145,7 @@ const Footer = () => {
         </p>
         <p>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/MaLenaDreyer/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg  font-josefin hover:underline"

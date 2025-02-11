@@ -2,9 +2,9 @@ import { useState } from "react";
 import styles from "../styles/carousel.module.css";
 
 const projects = [
-    { title: "The Cutie Life", link: "https://example.com/1", des: "Digital Website - Shoptify", backgroundColor: "#343067", textColor: "#FEFEF2" },
-    { title: "Boe Beatui", link: "https://example.com/2", des: "Video Editing", backgroundColor: "#E8B3A9", textColor: "#343067" },
-    { title: "Fine Studies", link: "https://example.com/3", des: "Website - Next.js", backgroundColor: "#fef2f2", textColor: "#343067" },
+    { title: "The Cutie Pie Life", link: "https://example.com/1", des: "Digital Website - Shoptify", backgroundColor: "#343067", textColor: "#FEFEF2" },
+    { title: "Boe Beaute", link: "https://boebeaute.com/product/no-17/", des: "Video Editing", backgroundColor: "#E8B3A9", textColor: "#343067" },
+    { title: "Fine Studies", link: "https://www.instagram.com/finehairstudio_cph/", des: "Logo design", backgroundColor: "#fef2f2", textColor: "#343067" },
   ];
 
 const Carousel = () => {
